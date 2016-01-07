@@ -1,0 +1,78 @@
+body {
+
+	margin: 0 auto;
+	width: 900px;
+	color: white;
+	background-color: black;
+	background-size: cover;
+}
+
+li {
+
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+.section {
+
+	width: 60%;
+	margin: 0 auto;
+
+	border: 8px solid white;
+
+	color: white;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.intro-links a {
+	color: white;
+
+}
+
+.intro-links {
+	padding:0;
+	text-align: center;
+	line-height: 25px;
+	list-style-type: square;
+	cursor: pointer;
+}
+
+.intro {
+
+	width: 80%;
+	margin:0 auto;
+
+	padding-top: 50px;
+	text-align: center;
+	height: 100%;
+
+}
+
+.intro .intro-header {
+	text-align: center;
+}
+
+.intro p a {
+	color: white;
+}
+
+.intro p {
+		text-align: justify;
+}
+
+.symbols {
+	text-align: center;
+}
+
+.list-symbols li {
+		display: inline-block;
+		margin-right: 30px;
+		cursor: pointer;
+		font-size: 20px;
+}
+
+
