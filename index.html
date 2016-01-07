@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<link rel="stylesheet" href="styleboard.css">
+</head>
+<body>
+	<div class="intro">
+		<h1 class="intro-header">Tic-Tac-Toe</h1>
+		<h3 class="intro-tag">See if you can win!</h3>
+		<p><strong>Tic-tac-toe</strong> (also known as Noughts and crosses or Xs and Os) is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+		<p><strong>'X'</strong> always goes first</p>
+		<p><a href="https://en.wikipedia.org/wiki/Tic-tac-toe">Read more...</a></p>
+		<div class="section">
+				<ul class="intro-links">
+					<li>Computer vs Player</li>
+					<li>2 Player</li>
+				</ul>
+		</div>
+	</div>
+	<div class="game" style="display: none;">
+		<div class="whose-turn"></div>
+		<div class="gameboard">	
+
+		</div>
+
+		<div class="controls"></div>
+		<div class="scoreboard"></div>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>

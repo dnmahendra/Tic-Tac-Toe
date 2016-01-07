@@ -1,0 +1,54 @@
+body {
+	margin: 0 auto;
+	width: 900px;
+	color: white;
+}
+
+.game {
+	width: 100%;
+	margin:0 auto;
+	background-color: black;
+	text-align: center;
+	margin-top: 20px;
+	height: 100%;
+}
+
+.gameboard {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.gameboard > table
+	{
+		width:400px;
+		height:400px;
+		text-align: center;
+		margin: 0 auto;
+		table-layout: fixed;
+
+	}
+
+.gameboard > table > tbody > tr > td {
+
+		padding:10px;
+		margin:10px;
+		border:3px solid #ccc;
+		font-size: 75px;
+		height: 125px;
+		font-family: 'Finger Paint', cursive;
+		
+}
+
+.scoreboard .score li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.controls {
+	text-align: center;
+	margin-top: 30px;
+}
+
+
+
+
