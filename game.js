@@ -6,7 +6,7 @@ var designGame = {
 	init: function() {
 
 			$('.section').on('click', 'li', function() {
-					var showSymbols = $('<h3>').html('Choose Symbol to Start..');
+					var showSymbols = $('<h3>').html('Choose a Symbol to Start..');
 					$('.section').append(showSymbols);
 					var divSymbols = $('<div>').addClass('symbols');
 					$('.section').append(divSymbols);
@@ -258,7 +258,7 @@ var playGame = {
 					$('.game-position').html("Congrats, Champion!!");
 				}
 				else if(this.result === 'draw') {
-					$('.game-position').html("It's Draw, how dull!!");
+					$('.game-position').html("It's a Draw, how dull!!");
 				}
 				else {
 					$('.game-position').html("Game over, man!!");
