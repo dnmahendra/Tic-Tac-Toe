@@ -1,8 +1,10 @@
 body {
 	color: white;
-	background-color: #B0C4DE;
+	background-color: #00868B;
 	background-size: cover;
 	font-size: 1em;
+	font-family: 'Cabin Sketch', cursive;
+	text-transform: uppercase;
 }
 
 li {
@@ -39,9 +41,25 @@ a {
 	cursor: pointer;
 }
 
+.levels {
+	padding: 0px;
+}
+
+.levels li {
+	text-align: center;
+	display:inline-block;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+a:hover {
+	color: #C1CDC1;
+}
+
+
 .intro {
 
-	width: 80%;
+	width: 60%;
 	margin:0 auto;
 
 	padding-top: 50px;
@@ -52,6 +70,11 @@ a {
 
 .intro .intro-header {
 	text-align: center;
+	font-size: 3em;
+}
+
+.intro-header .intro-tag {
+	line-height: -0.5em;
 }
 
 .intro p a {
@@ -73,4 +96,7 @@ a {
 		font-size: 2em;
 }
 
-
+.intro-tag {
+	color: orange;
+	margin-top: -1.5em;
+}

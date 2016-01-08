@@ -44,22 +44,22 @@
 		margin: 0 auto;
 		table-layout: fixed;
 		border-spacing: 0px;
-		border-style: ridge;
-
-
+		border-color: #CD9B1D;
 	}
 
 .gameboard > table > tbody > tr > td {
 
-		border:3px solid #ccc;
-		font-size: 75px;
+		border:5px solid white;
+		font-size: 5em;
 		height: 125px;
-		font-family: 'Finger Paint', cursive;
+		font-family: 'Cabin Sketch', cursive;
+		background-color: #43CD80;
+		border-style: inset;
 		
 }
 
 .gameboard > table > tbody > tr > td:hover {
-		background-color: #4876FF;		
+		background-color: #BBFFFF;		
 }
 
 .scoreboard .score li {
@@ -74,14 +74,13 @@
 
 button {
 	box-shadow:inset 0px 1px 0px 0px #008B45;
-	background:linear-gradient(to bottom, #008B45 5%, #00C957 100%);
+	background:linear-gradient(to bottom, #008B45 5%, #008B45 100%);
 	background-color: #008B45;
 	border-radius:6px;
 	border:1px solid #008B45;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:1em;
 	font-weight:bold;
 	padding:6px 24px;
@@ -90,15 +89,13 @@ button {
 }
 
 .game-position {
-	box-shadow:inset 0px 1px 0px 0px #f29c93;
-	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	/*box-shadow:inset 0px 1px 0px 0px #f29c93;*/
+	/*background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);*/
 	background-color:#fe1a00;
 	border-radius:6px;
 	border:1px solid #d83526;
 	display:inline-block;
-	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:1em;
 	font-weight:bold;
 	padding:6px 0px;

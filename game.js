@@ -2,10 +2,17 @@
 
 var designGame = {
 
-	playersymbol: "",
+	playerSymbol: "",
+	gameLevel: "",
 	init: function() {
 
-			$('.section').on('click', 'li', function() {
+			$('.levels').on('click', 'li', function() {
+				designGame.gameLevel = $(event.target).html();
+				$(event.target).css('color', 'orange');
+			})
+
+			$('.intro-links').on('click', 'li', function() {
+					$(event.target).css('color', 'orange');
 					var showSymbols = $('<h3>').html('Choose a Symbol to Start..');
 					$('.section').append(showSymbols);
 					var divSymbols = $('<div>').addClass('symbols');
@@ -153,9 +160,24 @@ var playGame = {
 		},
 	computerTurn: function(cell) {
 				if(playGame.status === 'playing') {
+					if(designGame.gameLevel === 'Tough') {
+						var probability = Math.random()*100;
+						console.log(probability);
+						if(probability >= 30) {
+							var move = AI.bestMove(playGame.board);
+						}
+						else {
+						var move = playGame.availableCells[Math.floor(Math.random() * playGame.availableCells.length)];
+						}
+					}
+					else if(designGame.gameLevel === 'Impossible') {
+						var move = AI.bestMove(playGame.board);
+					}
+					else {
+						var move = playGame.availableCells[Math.floor(Math.random() * playGame.availableCells.length)];
+					}
 
-					var move = AI.bestMove(playGame.board);
-					var randomNum = playGame.availableCells[Math.floor(Math.random() * playGame.availableCells.length)];
+
 					var randomtd = $('td').eq(move);
 
 					if(playGame.playerSymbol === 'X') {
@@ -243,6 +265,7 @@ var playGame = {
 		else {
 			playGame.computerScore++;
 		}
+		$('.scoreboard').empty();
 		var listScore = $('<ul>').addClass('score');
 		var pScore = $('<li>').html('PLAYER: ' + playGame.playerScore);
 		var cScore = $('<li>').html('COMPUTER: ' + playGame.computerScore);
