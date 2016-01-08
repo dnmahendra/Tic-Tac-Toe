@@ -49,12 +49,12 @@
 
 .gameboard > table > tbody > tr > td {
 
-		border:5px solid white;
+		border:3px solid white;
 		font-size: 5em;
 		height: 125px;
 		font-family: 'Cabin Sketch', cursive;
 		background-color: #43CD80;
-		border-style: inset;
+		border-style: dashed;
 		
 }
 
