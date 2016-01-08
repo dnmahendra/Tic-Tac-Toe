@@ -124,7 +124,7 @@ var playGame = {
 	playerTurn: function() {
 
 			if(playGame.status === 'playing') {
-				$('.whose-turn').html('Your turn Player');
+				$('.game-position').html('Your turn Player');
 
 				$('.gameboard').on('click','td', function() {
 				if(!$(this).html()) {
@@ -137,16 +137,15 @@ var playGame = {
 					playGame.board[cell] = $(this).html();
 
 					playGame.emptyCells();
+
 					if(playGame.checkWinner()) {
-						$('.scoreboard').html(playGame.result);
 						playGame.status = 'ended';
 						playGame.updateScore();
+						playGame.endGame();
 					}
-
-					if(playGame.status !== 'ended') {
-
-					$('.whose-turn').html("Computer's turn now");
-					setTimeout(playGame.computerTurn, 1000);
+					else {
+						$('.game-position').html("Computer's turn now");
+						setTimeout(playGame.computerTurn, 1000);
 					}
 				}
 				});
@@ -169,14 +168,12 @@ var playGame = {
 					playGame.board[move] = randomtd.html();
 
 					if(playGame.checkWinner()) {
-						$('.scoreboard').html(playGame.result);
 						playGame.status = 'ended';
 						playGame.updateScore();
+						playGame.endGame();
 					}
-
-					if(playGame.status !== 'ended') {
-
-						$('.whose-turn').html('Your turn Player');
+					else {
+						$('.game-position').html('Your turn Player');
 					}
 			}
 		},
@@ -255,6 +252,17 @@ var playGame = {
 		dScore.appendTo(listScore);
 
 		listScore.appendTo('.scoreboard');
+	},
+	endGame: function() {
+				if(this.result.substring(0,1) === this.playerSymbol) {
+					$('.game-position').html("Congrats, Champion!!");
+				}
+				else if(this.result === 'draw') {
+					$('.game-position').html("It's Draw, how dull!!");
+				}
+				else {
+					$('.game-position').html("Game over, man!!");
+				}
 	}
 }
 
@@ -315,9 +323,7 @@ var AI = {
 	},
 
   	minValue: function(board) {
-  
-      // The first three conditions check are the stop
-      // conditions for the loop.
+
       if (this.checkWinner(this.maxPlayer, board)) {
           return 1;
       	} else if (this.checkWinner(this.minPlayer, board)) {

@@ -1,20 +1,38 @@
-body {
-	margin: 0 auto;
-	width: 900px;
-	color: white;
-}
+
 
 .game {
-	width: 100%;
+	max-width: 400px;
 	margin:0 auto;
-	background-color: black;
 	text-align: center;
 	margin-top: 20px;
 	height: 100%;
 }
 
+.game-position .gameboard .controls .scoreboard {
+		width: 100%;
+		height: 100vh;
+		float: left;
+		text-align: center;
+
+}
+
+.game-position {
+	background-color: orange;
+	width: 100%;
+	margin-bottom: 10px;
+
+}
+
+.controls {
+	width: 100%;
+}
+
+.scoreboard {
+	width: 100%;
+}
+
 .gameboard {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -25,18 +43,23 @@ body {
 		text-align: center;
 		margin: 0 auto;
 		table-layout: fixed;
+		border-spacing: 0px;
+		border-style: ridge;
+
 
 	}
 
 .gameboard > table > tbody > tr > td {
 
-		padding:10px;
-		margin:10px;
 		border:3px solid #ccc;
 		font-size: 75px;
 		height: 125px;
 		font-family: 'Finger Paint', cursive;
 		
+}
+
+.gameboard > table > tbody > tr > td:hover {
+		background-color: #4876FF;		
 }
 
 .scoreboard .score li {
@@ -49,6 +72,38 @@ body {
 	margin-top: 30px;
 }
 
+button {
+	box-shadow:inset 0px 1px 0px 0px #008B45;
+	background:linear-gradient(to bottom, #008B45 5%, #00C957 100%);
+	background-color: #008B45;
+	border-radius:6px;
+	border:1px solid #008B45;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
 
+.game-position {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:6px 0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
 
 
