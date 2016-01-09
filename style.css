@@ -59,7 +59,7 @@ a:hover {
 
 .intro {
 
-	width: 60%;
+	width: 80%;
 	margin:0 auto;
 
 	padding-top: 50px;
@@ -99,4 +99,15 @@ a:hover {
 .intro-tag {
 	color: orange;
 	margin-top: -1.5em;
+}
+
+@media all and (max-width: 50em) {
+	
+ul > li {
+		display: block;
+	}
+
+	body {
+		font-size: 50%;
+	}
 }

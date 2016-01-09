@@ -6,13 +6,9 @@ var designGame = {
 	gameLevel: "",
 	init: function() {
 
-			$('.levels').on('click', 'li', function() {
+			$('.level-section').on('click', 'li', function() {
 				designGame.gameLevel = $(event.target).html();
 				$(event.target).css('color', 'orange');
-			})
-
-			$('.intro-links').on('click', 'li', function() {
-					$(event.target).css('color', 'orange');
 					var showSymbols = $('<h3>').html('Choose a Symbol to Start..');
 					$('.section').append(showSymbols);
 					var divSymbols = $('<div>').addClass('symbols');
@@ -25,6 +21,23 @@ var designGame = {
 					divSymbols.append(listSymbols);
 
 					designGame.hidePage();
+			});
+
+			$('.intro-links').on('click', 'li', function() {
+					$(event.target).css('color', 'orange');
+
+					var showLevels = $('<h3>').html('Select a level');
+					$('.level-section').append(showLevels);
+					var listLevels = $('<ul>').addClass('levels');
+					var easy = $('<li>').addClass('lvl').html('Easy');
+					var tough = $('<li>').addClass('lvl').html('Tough');
+					var impossible = $('<li>').addClass('lvl').html('Impossible');
+					listLevels.append(easy);
+					listLevels.append(tough);
+					listLevels.append(impossible);
+					$('.level-section').append(listLevels);
+
+
 			});
 
 		},
