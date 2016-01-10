@@ -24,8 +24,13 @@ var designGame = {
 			});
 
 			$('.intro-links').on('click', 'li', function() {
-					$(event.target).css('color', 'orange');
+				var modeTarget = $(event.target);
+					modeTarget.css('color', 'orange');
 
+				if(modeTarget.html() === '2 Player') {
+					designGame.hidePage(modeTarget.html());
+				}
+				else {
 					var showLevels = $('<h3>').html('Select a level');
 					$('.level-section').append(showLevels);
 					var listLevels = $('<ul>').addClass('levels');
@@ -36,14 +41,20 @@ var designGame = {
 					listLevels.append(tough);
 					listLevels.append(impossible);
 					$('.level-section').append(listLevels);
-
-
+				}
 			});
 
 		},
 
-	hidePage: function() {
-			$('.symbols').on('click', 'li', function() {
+	hidePage: function(target) {
+
+			if(target === '2 Player') {
+				$('.intro').hide();
+				$('.game').show();
+				gamePlay();
+			}
+			else {
+				$('.symbols').on('click', 'li', function() {
 				var symbol = $(event.target).html();
 					$('.intro').hide();
 					$('.game').show();
@@ -51,7 +62,9 @@ var designGame = {
 					designGame.playerSymbol = symbol;
 					playGame.startGame();
 
-			});
+				});
+			}
+
 
 	},		
 	gameBoard: function() {

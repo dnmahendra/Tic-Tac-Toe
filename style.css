@@ -101,7 +101,7 @@ a:hover {
 	margin-top: -1.5em;
 }
 
-@media all and (max-width: 50em) {
+@media all and (max-width: 30em) {
 	
 ul > li {
 		display: block;
