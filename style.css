@@ -1,5 +1,4 @@
 body {
-
 	margin: 0 auto;
 	width: 900px;
 	color: white;
@@ -8,7 +7,6 @@ body {
 }
 
 li {
-
 	display: block;
 }
 
@@ -17,7 +15,6 @@ a {
 }
 
 .section {
-
 	width: 60%;
 	margin: 0 auto;
 
@@ -42,7 +39,6 @@ a {
 }
 
 .intro {
-
 	width: 80%;
 	margin:0 auto;
 
@@ -61,7 +57,7 @@ a {
 }
 
 .intro p {
-		text-align: justify;
+	text-align: justify;
 }
 
 .symbols {
@@ -69,10 +65,8 @@ a {
 }
 
 .list-symbols li {
-		display: inline-block;
-		margin-right: 30px;
-		cursor: pointer;
-		font-size: 20px;
+	display: inline-block;
+	margin-right: 30px;
+	cursor: pointer;
+	font-size: 20px;
 }
-
-
